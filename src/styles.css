@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body{
+    background-image: url('http://image.wallpaperlistings.com/bigphoto/110/1102827/notepad-wallpaper.jpg');
+    background: cover;
+
+   
+}
+h1{
+    -webkit-text-stroke: 2px black;
+    color: rgb(255, 255, 255);
+    font-family: 'Knewave', cursive;
+    text-align: center
+}
+.colorme{
+    color: rgb(8, 255, 82);
+}
+

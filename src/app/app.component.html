@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>My Todo list!</h1>
+        <div >
+
+           
+
+    
+
+        <div class="input-group mb-4">
+            <input [(ngModel)]="todoInput" type="text" class="form-control"
+            (keyup.enter)="createTodo()" placeholder="My tasks!" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary " type="button " (click)="createTodo()"><div class="colorme">+</div></button>
+              <button class="btn btn-danger"(click)="deleteAllTodos(todo)">Delete All!</button>
+            </div>
+          
+          </div>
+          
+          <table class="table table-striped table-dark"> 
+            <thead></thead>  
+            <tbody>
+                <tr *ngFor="let todo of todos">
+                  <td class="px-3 pt-3">
+                      <i *ngIf="todo.isChecked === false"(click)="checkOffTodo(todo)"class="far fa-square"></i>
+
+
+                      <i *ngIf="todo.isChecked === true"(click)="checkOffTodo(todo)"class="far fa-check-square"></i>
+
+                    <span [ngClass]="{'strike': todo.isChecked}">
+                    {{ todo.name }}</span>
+                  </td>
+
+                  <td class="text-right">
+                    <button (click) ="editTodo(todo)" class="btn">edit</button>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-danger"(click)="deleteTodo(todo)">Delete</button>
+                  </td>
+                  
+                  <td>
+                      
+                  </td>
+                  
+                 
+                </tr>
+              </tbody>
+            </table>
+            </div>
